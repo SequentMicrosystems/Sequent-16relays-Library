@@ -42,7 +42,7 @@ You can use this method with any Arduino card with an I2C port by connecting I2C
 Sequent Microsystems [Arduino Uno, Nano, Teensy, Feather or ESP32 Raspberry Pi Replacement Kit](https://sequentmicrosystems.com/products/raspberry-pi-replacement-card) is an inexpensive adapter which can be used to control any of our HATs using Uno, Nano, Teensy, Feather or ESP32. Plug the Home Automation HAT into the 40 pin connector of the adapter and write your Arduino software.
 
 ### Method 3: Using the SM ESP32-Pi Raspberry Pi Alternative Card
-ESP32-Pi is a Raspberry Pi alternate solution that can control directly the Sexteen Relays HAT.
+ESP32-Pi is a Raspberry Pi alternate solution that can directly control the Sexteen Relays HAT.
 In your sketchbook set the board type to DOIT ESP32 DEVKIT V1: Tool >> Board >> ESP32 Arduino >> DOIT ESP32 DEVKIT V1
 
 ## Functions prototypes
@@ -71,11 +71,11 @@ In your sketchbook set the board type to DOIT ESP32 DEVKIT V1: Tool >> Board >> 
 	 * @param val The new state true = on, false = off
 	 * @return true if succeed, false else
 	 */
-	bool relay(uint8_t relay, bool val);
+	bool writeRelay(uint8_t relay, bool val);
 
 	/*!
 	 * @brief Turn on or Off all relays
 	 * @param val All 16 relays state as a bitmap
 	 * @return true if succeed, false else
 	 */
-	bool relay(uint16_t val);
+	bool writeRelay(uint16_t val);
